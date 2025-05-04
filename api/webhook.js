@@ -22,7 +22,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         model: "gpt-4o",
         messages: [
-          { role: "system", content: "請從報價句子中抽取 客戶、品項、數量、工法、單價，以 JSON 格式輸出。" },
+          { role: "system", content: "請從報價句子中抽取『客戶、品項、數量、工法、單價』並輸出為**純 JSON 格式**（無任何文字註解），範例如下：{\"客戶\":\"小王\",\"品項\":\"鳥眼布\",\"數量\":300,\"工法\":\"數位印花\",\"單價\":70}" },
           { role: "user", content: messageText },
         ],
       }),
